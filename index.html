@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangatt Byy!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        .text-center {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px; /* margin is -0.5 * dimension */
+            margin-top: -75px; 
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            cursor: pointer;
+            transition: color .15s
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-center {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px; /* margin is -0.5 * dimension */
+            margin-top: -25px; 
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <div class="btn-center bg-music">
+        <button class="btn btn-primary">Klik aja kalau dah siap ya :D</button>
+    </div>
+    <div class="text-center">
+        <h1>Dah mau ngomong itu doang hihi</h1>
+        <h3>makasih udah ngeluangin waktu :D</h3>
+    </div>
+     <script>
+        $(document).ready(function(){
+            // membuat element audio
+            let $sound = $("<audio preload=auto>")
+            // tambahkan atribut resource suaranya
+            $sound.attr("src", "song.mp3")
+            $(".btn").click(function(){
+                $(this).hide()
+                $("body").append($sound)
+                $sound[0].play()
+
+                Swal.fire({
+                    imageUrl: 'Asset/1.gif',
+                    imageHeight: 250,
+                    title: 'Hai gimana kabarnya hari ini ?',
+                    showConfirmButton: false,
+                    timer: 4000
+                })
+                setTimeout(function(){
+                    Swal.fire({
+                        imageUrl: 'Asset/2.gif',
+                        imageHeight: 250,
+                        title: 'Kegiatan lagi banyak banyaknya ya',
+                        showConfirmButton: false,
+                        timer: 4000
+                    })
+                    setTimeout(function(){
+                        Swal.fire({
+                            imageUrl: 'Asset/3.gif',
+                            imageHeight: 250,
+                            title: 'Jan lupa jaga kesehatan yaa',
+                            showConfirmButton: false,
+                            timer: 4000
+                        })
+                        setTimeout(function(){
+                            Swal.fire({
+                                imageUrl: 'Asset/4.gif',
+                                imageHeight: 250,
+                                title: 'Mam sama minum yang banyak juga',
+                                showConfirmButton: false,
+                                timer: 4000
+                            })
+                            setTimeout(function(){
+                                Swal.fire({
+                                    imageUrl: 'Asset/5.gif',
+                                    imageHeight: 250,
+                                    title: 'Tapi tolong kegiatannya jan egois dung!',
+                                    showConfirmButton: false,
+                                    timer: 4000
+                                })
+                                setTimeout(function(){
+                                    Swal.fire({
+                                        imageUrl: 'Asset/6.gif',
+                                        imageHeight: 250,
+                                        title: 'Udah ngambil waktu, jan ambil senyum dia juga dung',
+                                        showConfirmButton: false,
+                                        timer: 4000
+                                    })
+                                    setTimeout(function(){
+                                        Swal.fire({
+                                            imageUrl: 'Asset/7.gif',
+                                            imageHeight: 250,
+                                            title: 'Tetep semangat sayang',
+                                            showConfirmButton: false,
+                                            timer: 4000
+                                        })
+                                        setTimeout(function(){
+                                            Swal.fire({
+                                                imageUrl: 'Asset/8.gif',
+                                                imageHeight: 250,
+                                                title: 'Love Youu Mwahh <3',
+                                                showConfirmButton: false,
+                                                timer: 4000
+                                            })
+                                            setTimeout(function(){
+                                                $(".text-center").slideDown()
+                                            }, 4100)
+                                        }, 4100)
+                                    }, 4100)
+                                }, 4100)
+                            }, 4100)
+                        }, 4100)
+                    }, 4100)
+                }, 4100)
+            })
+            $(".text-center").hide()
+        })
+              
+     </script>
+</body>
+</html>
